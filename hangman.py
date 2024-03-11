@@ -30,13 +30,14 @@ while not end_of_game:
         print(f"You guessed {guess}, that's not in the word. You lose a life!")
         lives -= 1
         # print(stages[lives])
-        if lives == 0:
-            end_of_game = True
-            print("".join(display))
-            print("You lose!")
-            print(f"The word was {chosen_word}")
+    if lives == 0:
+        end_of_game = True
+        print("".join(display))
+        print("You lose!")
+        print(f"The word was {chosen_word}")
+        print(stages[lives])
 
-    if "_" not in display:
+    elif "_" not in display:
         end_of_game = True
         print("".join(display))
         print("You win!")
